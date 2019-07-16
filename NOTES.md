@@ -1,4 +1,4 @@
-# *Rails* Final Project: *Rank Up*
+# Rails Final Project: *Rank Up*
 a Rails application that allows users to create top 5 lists
 from an assortment of categories
 
