@@ -6,10 +6,11 @@ from an assortment of categories
 @user       -<      @rankings     >--     @sports       
                                              |
                                              ^
-                                           @teams       
+                                          @teams       
                                              |
                                              ^
-                                          @players
+                                         @players
+                                         
 
 @user
 * name
