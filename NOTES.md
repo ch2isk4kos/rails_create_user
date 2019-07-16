@@ -12,7 +12,8 @@ from an assortment of categories
                                          @players
 
 @user
-* name
+* username
+* email
 * password_digest
 * fav_sport
 * fav_team
