@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    # root 'welcome#welcome'
+    root 'welcome#home'
 
     resources :users, except: [:index]
 
