@@ -1,24 +1,25 @@
 class SessionsController < ApplicationController
 
+    # LOG IN
     def new
+        # @user = User.new
     end
 
     def create
-        #find the user
-        @user = User.find_by(username: params[:user][:username])
-
-        #if we find something & they have the right password
-        if @user && @user.authenticate(params[:user][:password])
-            session[:user_id] = @user.id
-            redirect_to user_path(@user.id)
+        user = User.find_by(email: params[:email])
+        if user && user.authenticate(params[:password])
+            session[:user_id] = user.id
+            flash[:success] = "You have successfully logged in"
+            redirect_to user_path(user)
         else
-            flash[:message] = "Sorry, please try again"
-            redirect_to login_path
+            flash.now[:danger] = "There was a problem with your login information."
+            render 'new'
         end
     end
 
     def destroy
         session.clear
+        # flash[:success] = "You have successfully logged out" 
         redirect_to root_path
     end
 end
