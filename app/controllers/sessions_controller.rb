@@ -2,18 +2,17 @@ class SessionsController < ApplicationController
 
     # LOG IN
     def new
-        # @user = User.new
     end
 
     def create
-        user = User.find_by(email: params[:email])
-        if user && user.authenticate(params[:password])
+        user = User.find_by(email: params[:user][:email])
+        if user && user.authenticate(params[:user][:password])
             session[:user_id] = user.id
             flash[:success] = "You have successfully logged in"
-            redirect_to user_path(user)
+            redirect_to user
         else
             flash.now[:danger] = "There was a problem with your login information."
-            render 'new'
+            render :new
         end
     end
 
