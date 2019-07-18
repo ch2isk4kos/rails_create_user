@@ -49,14 +49,15 @@ has_many :players, through: teams
 * year
 
 belongs_to :sport
-belongs_to :player
-
 
 @player
 * first_name
 * last_name
+* position
 * number
-*
+* year
+
+belongs_to :team
 
 # Specifications for the Rails Assessment
 
@@ -82,3 +83,13 @@ Confirm:
 - [x] Limited logic in controllers
 - [x] Views use helper methods if appropriate
 - [x] Views use partials if appropriate
+
+# Migrations
+
+*User*
+* $ rails g resource User username:string email:string password_digest:string fav_sport:string fav_team:string fav_player:string --no-test-framework
+
+*Ranking*
+
+*Sport*
+* $ rails g resource Sport name:string --no-test-framework
