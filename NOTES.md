@@ -25,7 +25,6 @@ has_many :sports, through: :rankings
 
 @ranking
 * description
-* comment
 * user_id
 * sports_id
 
@@ -92,6 +91,7 @@ Confirm:
 * $ rails g resource User username:string email:string password_digest:string fav_sport:string fav_team:string fav_player:string --no-test-framework
 
 *Ranking*
+* $ rails g resource Ranking
 
 *Sport*
 * $ rails g resource Sport name:string --no-test-framework
