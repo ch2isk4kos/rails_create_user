@@ -85,6 +85,7 @@ Confirm:
 - [x] Views use helper methods if appropriate
 - [x] Views use partials if appropriate
 
+
 # Migrations
 
 *User*
