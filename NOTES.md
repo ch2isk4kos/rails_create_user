@@ -50,6 +50,7 @@ has_many :players, through: teams
 
 belongs_to :sport
 
+
 @player
 * first_name
 * last_name
@@ -59,8 +60,8 @@ belongs_to :sport
 
 belongs_to :team
 
-# Specifications for the Rails Assessment
 
+# Specifications for the Rails Assessment
 Specs:
 - [x] Using Ruby on Rails for the project
 - [x] Include at least one has_many relationship (x has_many y; e.g. User has_many Recipes)
